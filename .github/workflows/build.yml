@@ -12,6 +12,7 @@ jobs:
         - name: Setup Clang
           uses: KyleMayes/install-llvm-action@v2
           with: 
+            version: 20
             force-url: https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86
             directory: ./clang
 
