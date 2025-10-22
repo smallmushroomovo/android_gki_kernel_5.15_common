@@ -10,10 +10,10 @@ jobs:
           uses: actions/checkout@v4
 
         - name: Setup Clang
-          run: git clone https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86 --single-branch
+          run: git clone https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86 --single-branch --depth 1
 
         - name: Setup GCC
-          run: git clone https://gitlab.com/matthewalex/aarch64-linux-android-5.x-kernel-linaro.git --single-branch
+          run: git clone https://gitlab.com/matthewalex/aarch64-linux-android-5.x-kernel-linaro.git --single-branch --depth 1
 
         - name: Patch SukiSU
           run: |
