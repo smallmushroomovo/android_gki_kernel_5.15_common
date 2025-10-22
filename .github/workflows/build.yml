@@ -35,7 +35,7 @@ jobs:
 
         - name: Build Kernel
           run: |
-            export PATH="/home/small__mushroom/BUILD_hfdem_KERNEL/linux-x86/clang-r547379/bin:/home/small__mushroom/BUILD_hfdem_KERNEL/aarch64-linux-android-5.x-kernel-linaro/bin:$PATH"
+            export PATH="./linux-x86/clang-r547379/bin:./aarch64-linux-android-5.x-kernel-linaro/bin:$PATH"
             export ARCH=arm64
             export SUBARCH=arm64
             export CC=clang
