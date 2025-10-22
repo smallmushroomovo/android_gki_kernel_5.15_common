@@ -33,6 +33,11 @@ jobs:
             patch -p1 < 50_add_susfs_in_gki-android13-5.15.patch
             echo "CONFIG_KSU_SUSFS=y" >> "arch/arm64/configs/gki_defconfig"
 
+        - name: Install libelf🤔
+          uses: ConorMacBride/install-package@v1
+          with:
+            apt: libelf-dev
+
         - name: Build Kernel
           run: |
             export PATH="./clang/clang-r547379/bin:$PATH"
