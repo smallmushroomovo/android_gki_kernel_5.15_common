@@ -13,7 +13,6 @@ jobs:
           uses: KyleMayes/install-llvm-action@v2
           with: 
             version: 20
-            force-url: https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86
             directory: ./clang
 
         - name: Patch SukiSU
@@ -46,8 +45,8 @@ jobs:
             export HOSTCXX=clang++
             export HOSTLD=ld.lld
             export HOSTAR=llvm-ar
-            export CROSS_COMPILE=aarch64-linux-android-
-            export CLANG_TRIPLE=aarch64-linux-android-
+            export CROSS_COMPILE=aarch64-linux-gnu-
+            export CLANG_TRIPLE=aarch64-linux-gnu-
             export LLVM=1
             export KCDFLAGS=-flto=thin
             make O=out arch/arm64/configs/defconfig gki_defconfig
